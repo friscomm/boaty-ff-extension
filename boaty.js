@@ -1,10 +1,10 @@
 let logo = document.getElementById('logo');
 let banner = logo.childNodes[0];
 let newHeader1 = document.createTextNode('BOATY MCBOATNET');
-let imageUrl = browser.runtime.getURL('images/boatnet.jpg');
-let imageUrl = browser.runtime.getURL('images/sailor.png');
-let imageUrl = browser.runtime.getURL('images/pirate.png');
 let newImg = document.createElement('IMG');
+let imageUrl = browser.runtime.getURL('images/boatnet.jpg');
+let sailorUrl = browser.runtime.getURL('images/sailor.png');
+let pirateUrl = browser.runtime.getURL('images/pirate.png');
 let newAnchor = document.createElement('A');
 let newFooter = document.createTextNode('BOATY');
 let footer = document.getElementById('poweredby');
