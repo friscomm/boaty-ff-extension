@@ -1,11 +1,24 @@
 let logo = document.getElementById('logo');
 let banner = logo.childNodes[0];
 let newHeader1 = document.createTextNode('BOATY MCBOATNET');
-let imageUrl = browser.runtime.getURL('images/boat.jpg');
+let imageUrl = browser.runtime.getURL('images/boatnet.jpg');
+let imageUrl = browser.runtime.getURL('images/sailor.png');
+let imageUrl = browser.runtime.getURL('images/pirate.png');
 let newImg = document.createElement('IMG');
 let newAnchor = document.createElement('A');
 let newFooter = document.createTextNode('BOATY');
 let footer = document.getElementById('poweredby');
+
+function changeUserPics(className){
+  let pics = document.getElementsByClassName(className);
+  for (i=0; i < pics.length; i++){
+    if (i % 2 == 0) {
+      pics[i].setAttribute('src', sailorUrl)
+    } else {
+      pics[i].setAttribute('src', pirateUrl)
+    }
+  }
+}
 
 function replaceFooter(){
   footer.innerHTML = '';
@@ -49,7 +62,6 @@ function replaceTextWithStuff(oldText, replacementText) {
 
 function replaceSearchText() {
   let searchBars = document.getElementsByName('search');
-
   for (i = 0; i < searchBars.length; i++) {
     let searchNode = searchBars[i];
     searchNode.value=""
@@ -61,6 +73,9 @@ styleImg();
 styleAnchor();
 replaceHeader();
 replaceFooter();
+changeUserPics('ig-thumbnail-48-none');
+changeUserPics('ig-thumbnail-64-none');
+changeUserPics('ig-thumbnail-175-none');
 
 replaceSearchText();
 replaceTextWithStuff(/team members/gi, 'Crewmates');
