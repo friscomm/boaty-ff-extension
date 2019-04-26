@@ -8,6 +8,8 @@ let pirateUrl = browser.runtime.getURL('images/pirate.png');
 let newAnchor = document.createElement('A');
 let newFooter = document.createTextNode('BOATY');
 let footer = document.getElementById('poweredby');
+let innerFooter = document.getElementById('footer-inner');
+let acknowledgement = '<div style="font-size: 7px;">Some icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>, and <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>';
 
 function changeUserPics(className){
   let pics = document.getElementsByClassName(className);
@@ -73,6 +75,7 @@ styleImg();
 styleAnchor();
 replaceHeader();
 replaceFooter();
+innerFooter.insertAdjacentHTML('afterend', acknowledgement);
 changeUserPics('ig-thumbnail-48-none');
 changeUserPics('ig-thumbnail-64-none');
 changeUserPics('ig-thumbnail-175-none');
