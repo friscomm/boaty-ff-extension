@@ -1,20 +1,16 @@
 {
-
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "Boatify",
   "version": "1.0",
-
-  "description": "Adds a red border to all webpages matching mozilla.org.",
-
+  "description": "Adds Boaty McBoatnet and an accompanying nautical theme to Igloo",
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/boatnet-bigger.png",
+    "96": "icons/boatnet-bigger.png"
   },
-
   "content_scripts": [
     {
       "matches": ["*://*.igloocommunities.com/*"],
       "js": ["boaty.js"]
     }
   ]
-
 }
